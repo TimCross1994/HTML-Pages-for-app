@@ -13,26 +13,18 @@
             .month {
                 display: flex;
                 justify-content: flex-end;
-              padding: 50px 25px;
-              width: 100%;
+                padding: 50px 25px;
+              /*width: 100%;
               background: #ffff;
-              text-align: center;
+              text-align: center;*/
             }
             .title {
-                padding: 50px 25px;
                 text-align: center;  
             }
             
             .month ul {
               margin: 0;
               padding: 0;
-            }
-            
-            .month ul li {
-              color: white;
-              font-size: 20px;
-              text-transform: uppercase;
-              letter-spacing: 3px;
             }
             
             .month .prev {
@@ -59,7 +51,7 @@
             }
             
             .days {
-              padding: 10px 0;
+              padding: 50px 0;
               background: #eee;
               margin: 0;
             }
@@ -67,7 +59,7 @@
             .days li {
               list-style-type: none;
               display: inline-block;
-              width: 13.6%;
+              width: 15.6%;
               text-align: center;
               margin-bottom: 5px;
               font-size:12px;
@@ -78,6 +70,18 @@
               padding: 5px;
               background: #1abc9c;
               color: white !important
+            }
+            .timezone{
+                display:flex;
+                justify-content: flex-end;
+                font-size:12px;
+            }
+            .buttons button{
+                padding: 10px;
+                border-radius: 10%;
+                background-color: #a1ce9a;
+                color: white;
+                font-size: 15px;
             }
             
             /* Add media queries for smaller screens */
@@ -93,22 +97,25 @@
             @media screen and (max-width: 290px) {
               .weekdays li, .days li {width: 12.2%;}
             }
+
             </style>
     <title>Calender</title>
 </head>
 <body>
-        <div class="month">
-                <ul>
+   
+    <div class="month">
+        <button>today</button>
+        <button>&lt;</button>
+        <button>&gt;</button>
+        <input class='title'placeholder='November 2019'></input>
+        <ul>
                   <button class="prev">Month</button>
                   <button class="next">Week</button>
                   <button class="next">List</button>
                   <button class="next">Schedule</button>
                 </ul>
             </div>
-            <div class='title'>
-                <input placeholder='November 2019'></input>
-            </div>
-              
+            
               <ul class="weekdays">
                 <li>Mo</li>
                 <li>Tu</li>
@@ -150,9 +157,12 @@
                 <li>28</li>
                 <li>29</li>
                 <li>30</li>
-              </ul>
-<button>create blackout</button>
-<button>create announcement</button>
-<button>create discount</button>
+            </ul>
+            <p class='timezone'>Timezone:<button placeholder='local'>local</button></p>            <br>
+<div class='buttons'>
+    <button>create blackout</button>
+    <button class='announce'>create announcement</button>
+    <button>create discount</button>
+</div>            
 </body>
 </html>
